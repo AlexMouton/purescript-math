@@ -20,6 +20,8 @@ exports.ceil = Math.ceil;
 
 exports.cos = Math.cos;
 
+exports.cosh = Math.cosh;
+
 exports.exp = Math.exp;
 
 exports.floor = Math.floor;
@@ -58,9 +60,13 @@ exports.round = Math.round;
 
 exports.sin = Math.sin;
 
+exports.sinh = Math.sinh;
+
 exports.sqrt = Math.sqrt;
 
 exports.tan = Math.tan;
+
+exports.tanh = Math.tanh;
 
 exports.e = Math.E;
 

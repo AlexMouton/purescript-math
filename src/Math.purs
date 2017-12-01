@@ -2,6 +2,8 @@
 -- | See [Math Reference at MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math).
 module Math where
 
+import Prelude ((<<<), (/))
+
 -- | An alias to make types in this module more explicit.
 type Radians = Number
 
@@ -30,6 +32,8 @@ foreign import ceil :: Number -> Number
 -- | Returns the cosine of the argument.
 foreign import cos :: Radians -> Number
 
+foreign import cosh :: Number -> Number
+
 -- | Returns `e` exponentiated to the power of the argument.
 foreign import exp :: Number -> Number
 
@@ -51,14 +55,21 @@ foreign import pow :: Number -> Number -> Number
 -- | Returns the integer closest to the argument.
 foreign import round :: Number -> Number
 
+sech :: Number -> Number
+sech = ((/) 1.0) <<< cosh
+
 -- | Returns the sine of the argument.
 foreign import sin :: Radians -> Number
+
+foreign import sinh :: Number -> Number
 
 -- | Returns the square root of the argument.
 foreign import sqrt :: Number -> Number
 
 -- | Returns the tangent of the argument.
 foreign import tan :: Radians -> Number
+
+foreign import tanh :: Number -> Number
 
 -- | Truncates the decimal portion of a number. Equivalent to `floor` if the
 -- | number is positive, and `ceil` if the number is negative.
